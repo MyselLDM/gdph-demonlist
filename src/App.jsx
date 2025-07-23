@@ -1,14 +1,19 @@
-
+import Footer from "./global/footer";
+import Header from "./global/header";
+import AppRoutes from "./AppRoutes";
 
 function App() {
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Header></Header>
+
+      <main className="flex">
+        <AppRoutes></AppRoutes>
+      </main>
+
+      <Footer></Footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
