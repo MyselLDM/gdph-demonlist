@@ -1,11 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./public_pages/home/home";
+import Demonlist from "./public_pages/demonlist/Demonlist";
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/demonlist" element={<></>} />
+      <Route path="/demonlist" element={<Demonlist demonlistType="main" />} />
+      <Route
+        path="/demonlist/extended"
+        element={<Demonlist demonlistType="extended" />}
+      />
+      <Route
+        path="/demonlist/legacy"
+        element={<Demonlist demonlistType="legacy" />}
+      />
       <Route path="/demonlist/:id" element={<></>} />
       <Route path="/packs" element={<></>} />
       <Route path="/stats" element={<></>} />

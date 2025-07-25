@@ -37,7 +37,7 @@ const Changelog = () => {
         scale: isInView ? 1 : 0.8,
       }}
       transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1] }}
-      className="mt-5 flex w-full flex-col gap-2 border-t-2 border-neutral-300 pt-5"
+      className="mt-5 flex w-full flex-col gap-2 border-t-2 border-neutral-800 pt-5"
     >
       <div className="flex flex-col">
         <h2 className="main-title text-xl font-bold text-pink-500 md:text-2xl">
@@ -48,14 +48,14 @@ const Changelog = () => {
           See the recent levels that had recent changes in the demonlist!
         </p>
       </div>
-      <div className="flex flex-col gap-5 rounded-xl bg-pink-100 p-5 shadow-lg/20 shadow-pink-500">
+      <div className="flex flex-col gap-5 rounded-xl border-2 border-pink-900/50 p-5 shadow-lg/20 shadow-pink-500">
         {data?.map((item, i) => {
           return (
             <div
               key={i}
-              className={`flex flex-col rounded-xl bg-pink-50 text-pink-900 shadow-lg md:text-lg`}
+              className={`flex flex-col rounded-lg bg-pink-950 text-pink-50 shadow-lg md:text-lg`}
             >
-              <div className="rounded-tl-xl rounded-tr-xl bg-pink-500 p-1 font-extrabold text-white">
+              <div className="rounded-tl-xl rounded-tr-xl bg-pink-800 p-1 font-extrabold text-white">
                 <p>{new Date(item.date).toDateString()}</p>
               </div>
               <div className="p-2">

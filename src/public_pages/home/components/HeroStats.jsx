@@ -24,7 +24,7 @@ const HeroStats = () => {
 
   return (
     <motion.section
-      className="mt-5 flex w-full flex-col gap-2 border-t-2 border-neutral-300 pt-5 md:flex-row"
+      className="mt-5 flex w-full flex-col gap-2 border-t-2 border-neutral-800 pt-5 md:flex-row"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
@@ -46,7 +46,7 @@ const HeroStats = () => {
         {Object.entries(cleanStats).map(([key, value], i) => (
           <motion.div
             key={key}
-            className="bg-neutral flex flex-grow flex-col items-center rounded-lg bg-blue-100 p-5 shadow-xl shadow-blue-800/15"
+            className="bg-neutral flex flex-grow flex-col items-center rounded-xl border-2 border-blue-700 bg-blue-950/20 p-5 shadow-xl shadow-blue-800/15"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
