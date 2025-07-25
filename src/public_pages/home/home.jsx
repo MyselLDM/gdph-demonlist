@@ -1,9 +1,13 @@
-import HeroStats from "./components/query_seg";
+import Changelog from "./components/Changelog";
+import HeroSection from "./components/HeroSection";
+import HeroStats from "./components/HeroStats";
 
 export default function Home() {
   return (
-    <div className="dark:">
-      <HeroStats></HeroStats>
-    </div>
+    <>
+      <HeroSection />
+      <HeroStats />
+      <Changelog />
+    </>
   );
 }

@@ -1,0 +1,25 @@
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(
+    90deg,
+    #ff64be,
+    #ff64e5,
+    #8154ff,
+    #8154ff,
+    #ca43ff,
+    #ff64be
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}

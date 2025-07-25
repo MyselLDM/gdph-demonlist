@@ -1,3 +1,4 @@
+-- This is the query for the changelog
 CREATE OR REPLACE FUNCTION get_changelog_5()
 RETURNS TABLE(
   type TEXT,
@@ -23,3 +24,4 @@ SELECT
 FROM changelog c LIMIT 5;
 END;
 $$ LANGUAGE plpgsql
+
