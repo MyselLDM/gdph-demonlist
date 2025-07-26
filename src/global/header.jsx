@@ -13,7 +13,7 @@ export default function Header() {
     "text-sm hover:shadow-lg rounded-lg hover:scale-105 hover:font-bold duration-200 text-center ease(--my-beizer) h-fit p-5 md:p-2 md:text-lg lg:text-xl";
   return (
     <motion.header
-      className="header fixed z-50 flex w-full justify-around bg-neutral-800/50 text-sm font-light text-pink-600 drop-shadow-lg/10 backdrop-blur-sm"
+      className="header fixed z-50 flex w-full justify-around text-sm font-light text-pink-600 drop-shadow-lg/10 backdrop-blur-sm"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{

@@ -1,6 +1,6 @@
 // Gets the type of demonlist
 
-export function getRange(type) {
+function getRange(type) {
   switch (type) {
     case "main":
       return [1, 75];
@@ -28,20 +28,24 @@ const list_type = [
   },
 ];
 
-export function getYouTubeThumbnail(url) {
-  if (url.includes("twitch")) {
-    // You can either return a placeholder/fallback image URL or null
-    return "/no-thumbnail-image.webp"; // assuming it's in public/
-  }
-
+function extractVideoId(url) {
   const match = url.match(
     /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/,
   );
 
   if (!match) return null;
-
-  const videoId = match[1];
-  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  return match[1];
 }
 
-export { list_type };
+function getYouTubeThumbnail(url) {
+  if (url.includes("twitch")) {
+    return "/no-thumbnail-image.webp";
+  }
+
+  const videoId = extractVideoId(url);
+  if (!videoId) return null;
+
+  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+}
+
+export { list_type, extractVideoId, getYouTubeThumbnail, getRange };
