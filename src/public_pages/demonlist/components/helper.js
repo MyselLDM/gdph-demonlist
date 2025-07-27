@@ -26,6 +26,13 @@ const list_type = [
     decription:
       "Levels that are kind of hard, but not too hard... Feeling lucky? Give one a spin!",
   },
+  {
+    name: "Legacy",
+    min: 151,
+    max: 280,
+    decription:
+      "Levels that have been fallen off the list, these levels are unmaintained and the ordering may not be accurate anymore.",
+  },
 ];
 
 function extractVideoId(url) {
@@ -48,4 +55,33 @@ function getYouTubeThumbnail(url) {
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 }
 
-export { list_type, extractVideoId, getYouTubeThumbnail, getRange };
+function getThemeColor(type) {
+  switch (type) {
+    case "Main":
+      return "yellow";
+    case "Extended":
+      return "pink";
+    case "Legacy":
+      return "blue";
+  }
+}
+
+function getTextColor(type) {
+  switch (type) {
+    case "Main":
+      return "shiny-main-list-text";
+    case "Extended":
+      return "shiny-extended-list-text";
+    case "Legacy":
+      return "shiny-legacy-list-text";
+  }
+}
+
+export {
+  list_type,
+  extractVideoId,
+  getYouTubeThumbnail,
+  getRange,
+  getThemeColor,
+  getTextColor,
+};

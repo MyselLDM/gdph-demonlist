@@ -23,3 +23,70 @@
   -webkit-text-fill-color: transparent;
   animation: shine 3s linear infinite;
 }
+
+.shiny-extended-list-text {
+  background: #ff2b60;
+  background: linear-gradient(
+    90deg,
+    rgb(255, 43, 160) 0%,
+    rgb(243, 107, 255) 22%,
+    rgba(255, 255, 255, 1) 33%,
+    rgb(255, 107, 218) 45%,
+    rgb(255, 43, 107) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+.shiny-legacy-list-text {
+  background: #2b79ff;
+  background: linear-gradient(
+    90deg,
+    rgba(43, 121, 255, 1) 0%,
+    rgba(107, 230, 255, 1) 22%,
+    rgba(255, 255, 255, 1) 33%,
+    rgba(107, 230, 255, 1) 45%,
+    rgba(43, 121, 255, 1) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+.shiny-main-list-text {
+  background: #2b79ff;
+  background: linear-gradient(
+    90deg,
+    #ffca57,
+    #ffb730,
+    #ffffff,
+    #ffffff,
+    #ffb730
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+.shiny-position-text {
+  background: linear-gradient(
+    90deg,
+    #ffca57,
+    #ffb730,
+    #ffffff,
+    #ffffff,
+    #ffb730
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}

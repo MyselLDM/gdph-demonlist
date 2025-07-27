@@ -16,9 +16,11 @@ const Demonlist = ({ demonlistType }) => {
 
   return (
     <>
-      <div>
+      <section className="demonlist flex flex-col gap-20">
         <ListMap data={data} list_type={list_type[0]} />
-      </div>
+        <ListMap data={data} list_type={list_type[1]} />
+        <ListMap data={data} list_type={list_type[2]} />
+      </section>
     </>
   );
 };

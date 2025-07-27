@@ -3,6 +3,7 @@ import Header from "./global/header";
 import AppRoutes from "./AppRoutes";
 import { useQuery } from "@tanstack/react-query";
 import getRandomUrl from "./public_pages/home/components/queries/getrandomurl";
+import LoadingDiv from "./global/async/Loading";
 
 function App() {
   const { data, isLoading, error } = useQuery({
@@ -11,7 +12,8 @@ function App() {
   });
 
   if (error instanceof Error) return <p>Error: {error.message}</p>;
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading)
+    return <LoadingDiv text={"Loading the cool backround image!"} />;
 
   return (
     <>
