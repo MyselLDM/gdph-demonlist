@@ -1,16 +1,5 @@
 // Gets the type of demonlist
 
-function getRange(type) {
-  switch (type) {
-    case "main":
-      return [1, 75];
-    case "extended":
-      return [76, 150];
-    case "legacy":
-      return [151, 100000];
-  }
-}
-
 const list_type = [
   {
     name: "Main",
@@ -35,53 +24,4 @@ const list_type = [
   },
 ];
 
-function extractVideoId(url) {
-  const match = url.match(
-    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]{11})/,
-  );
-
-  if (!match) return null;
-  return match[1];
-}
-
-function getYouTubeThumbnail(url) {
-  if (url.includes("twitch")) {
-    return "/no-thumbnail-image.webp";
-  }
-
-  const videoId = extractVideoId(url);
-  if (!videoId) return null;
-
-  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-}
-
-function getThemeColor(type) {
-  switch (type) {
-    case "Main":
-      return "yellow";
-    case "Extended":
-      return "pink";
-    case "Legacy":
-      return "blue";
-  }
-}
-
-function getTextColor(type) {
-  switch (type) {
-    case "Main":
-      return "shiny-main-list-text";
-    case "Extended":
-      return "shiny-extended-list-text";
-    case "Legacy":
-      return "shiny-legacy-list-text";
-  }
-}
-
-export {
-  list_type,
-  extractVideoId,
-  getYouTubeThumbnail,
-  getRange,
-  getThemeColor,
-  getTextColor,
-};
+export { list_type };

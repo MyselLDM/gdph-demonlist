@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getRange, list_type } from "./components/helper";
+import { list_type } from "./components/helper";
 import getDemonlist from "./components/GetDemonlist";
 import LoadingDiv from "../../global/async/Loading";
 import ListMap from "./components/ListMap";
@@ -16,7 +16,7 @@ const Demonlist = ({ demonlistType }) => {
 
   return (
     <>
-      <section className="demonlist flex flex-col gap-20">
+      <section className="demonlist flex flex-col gap-5 divide-y-2 divide-dashed divide-neutral-800">
         <ListMap data={data} list_type={list_type[0]} />
         <ListMap data={data} list_type={list_type[1]} />
         <ListMap data={data} list_type={list_type[2]} />
